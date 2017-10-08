@@ -41,6 +41,8 @@ module.exports = {
     'space-infix-ops': 0,  // && 加空格
     'keyword-spacing': 0,//关键字后面空格
     'no-var': 0,//使用var变量
+    'block-spacing':0,//大括号后面空格
+    'space-before-function-paren':0,// 方法后面空格
     'comma-spacing':0//逗号后面空格
   },
 }

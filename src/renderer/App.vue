@@ -11,5 +11,9 @@
 </script>
 
 <style>
+  body{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    background-color: rgb(236, 236, 236);
+  }
   /* CSS */
 </style>

@@ -17,17 +17,17 @@ let mainConfig = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(js)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        }
-      },
+      // {
+      //   test: /\.(js)$/,
+      //   enforce: 'pre',
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'eslint-loader',
+      //     options: {
+      //       formatter: require('eslint-friendly-formatter')
+      //     }
+      //   }
+      // },
       {
         test: /\.js$/,
         use: 'babel-loader',
@@ -44,7 +44,7 @@ let mainConfig = {
     __filename: process.env.NODE_ENV !== 'production'
   },
   output: {
-    filename: '[name].js',
+    filename: 'js/[name].js',
     libraryTarget: 'commonjs2',
     path: path.join(__dirname, '../dist/electron')
   },
