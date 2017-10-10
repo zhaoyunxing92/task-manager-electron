@@ -3,7 +3,7 @@
  * @date : 2017/9/29 16:44
  * @description :
  */
-const index = () => import(/* webpackChunkName: "task-welcome" */ './welcome.vue')
+const index = () => import(/* webpackChunkName: "group-foo" */ './welcome.vue')
 
 export const name = {
   path: '/welcome',

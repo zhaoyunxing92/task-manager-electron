@@ -1,6 +1,6 @@
 <template>
     <div class="login-layout">
-        <mu-linear-progress value="0" />
+        <mu-linear-progress value="0"/>
         <div class="content">
 
             <mu-flexbox>
@@ -10,6 +10,7 @@
                                    fullWidth ref="userName"/>
                 </mu-flexbox-item>
             </mu-flexbox>
+            
             <mu-flexbox>
                 <mu-flexbox-item grow="9">
                     <mu-text-field label="密码" hintText="请输入密码" type="password" labelFloat fullWidth ref="password"/>
@@ -56,7 +57,7 @@
             width: 80%;
             height: 80%;
             background-color: white;
-            .login-but{ /*两个提交按钮*/
+            .login-but { /*两个提交按钮*/
                 margin-top: 1rem;
             }
 
@@ -68,23 +69,23 @@
     name: 'task-login',
     data () { //数据
       return {
-        isShowPwd: true//是否显示密码
+        isShowPwd: false//是否显示密码
       }
     },
     methods: {
       //显示密码开关
       showPwdSwitch (){
-        let _ = this
-        _.$refs.password.type = _.isShowPwd ? 'text' : 'password'
-        _.isShowPwd=!_.isShowPwd;
+        let that = this
+        that.$refs.password.type = that.isShowPwd ? 'password' : 'text'
+        that.isShowPwd = !that.isShowPwd
       },
       //跳转首页
       login (){
-        this.$router.push('/welcome/index');
+        this.$router.push('/welcome/index')
       },
       //注册
       register(){
-        this.$router.push('/auth/reg');
+        this.$router.push('/auth/reg')
       }
     }
 

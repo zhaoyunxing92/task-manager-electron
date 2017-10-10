@@ -112,7 +112,8 @@ let webConfig = {
     new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {
-    filename: '[name].js',
+    filename: 'js/[name].js',
+    chunkFilename: 'chunk/[name].[id].chunk.js',
     path: path.join(__dirname, '../dist/web')
   },
   resolve: {
@@ -148,5 +149,4 @@ if (process.env.NODE_ENV === 'production') {
     })
   )
 }
-
 module.exports = webConfig
