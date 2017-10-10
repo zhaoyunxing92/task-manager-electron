@@ -12,6 +12,8 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
+const packageJson = require('../package.json')
+
 let electronProcess = null
 let manualRestart = false
 let hotMiddleware
@@ -114,7 +116,7 @@ function startMain () {
 }
 
 function startElectron () {
-  electronProcess = spawn(electron, ['--inspect=5858', path.join(__dirname, '../dist/electron/main.js')])
+  electronProcess = spawn(electron, ['--inspect=5858', packageJson.main])
 
   electronProcess.stdout.on('data', data => {
     electronLog(data, 'blue')
