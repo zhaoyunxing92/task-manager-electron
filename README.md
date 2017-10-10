@@ -1,6 +1,6 @@
 # task-manager-electron
 
-> ��������ϵͳ
+> 任务管理系统初始化流程
 
 #### Build Setup
 
