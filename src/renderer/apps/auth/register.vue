@@ -12,7 +12,7 @@
                                        :errorText="accountErrorHint"
                                        :maxLength="accountMaxLength"
                                        @blur="accountBlurCheck"
-                                       @textOverflow="emailInputOverflow"
+                                       @textOverflow="accountInputOverflow"
                                        fullWidth/>
                     </mu-flexbox-item>
                 </mu-flexbox>
@@ -81,7 +81,7 @@
         that.$refs.password.type = that.isShowPwd ? 'password' : 'text'
         that.isShowPwd = !that.isShowPwd
       },
-      emailInputOverflow(isOverflow){
+      accountInputOverflow(isOverflow){
         let that = this
         that.accountErrorHint = isOverflow ? '邮箱最多' + that.accountMaxLength + '个字符' : ''
       },
@@ -106,7 +106,7 @@
           that.accountErrorHint = '请输入正确的邮箱地址'
           return false
         } else if (account.length > accountMaxLength) {
-          that.passwordErrorHint = '邮箱最多' + accountMaxLength + '个字符'
+          that.accountErrorHint = '邮箱最多' + accountMaxLength + '个字符'
           return false
         } else {
           that.accountErrorHint = ''
@@ -137,7 +137,7 @@
       //注册
       register(){
         let that = this
-        if (that.accountBlurCheck && that.passwordBlurCheck()) {
+        if (that.accountBlurCheck() && that.passwordBlurCheck()) {
           that.showDialog = true
         }
       }

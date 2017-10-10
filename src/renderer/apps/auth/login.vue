@@ -1,11 +1,12 @@
 <template>
     <div class="login-layout">
-        <mu-linear-progress value="0"/>
+        <!--<mu-linear-progress value="0"/>-->
         <div class="content">
 
             <mu-flexbox>
                 <mu-flexbox-item>
-                    <mu-text-field label="账号" hintText="请输入邮箱/用户名/手机号" required="true" type="text"
+                    <mu-text-field label="账号" hintText="请输入邮箱/用户名/手机号"
+                                   type="text"
                                    labelFloat
                                    fullWidth ref="userName"/>
                 </mu-flexbox-item>
@@ -13,11 +14,16 @@
             
             <mu-flexbox>
                 <mu-flexbox-item grow="9">
-                    <mu-text-field label="密码" hintText="请输入密码" type="password" labelFloat fullWidth ref="password"/>
+                    <mu-text-field label="密码"
+                                   hintText="请输入密码"
+                                   type="password"
+                                   labelFloat
+                                   fullWidth ref="password"/>
                 </mu-flexbox-item>
                 <mu-flexbox-item grow="2">
                     <mu-checkbox uncheckIcon="visibility_off"
-                                 checkedIcon="visibility" @change="showPwdSwitch()"/>
+                                 checkedIcon="visibility"
+                                 @change="showPwdSwitch()"/>
                 </mu-flexbox-item>
             </mu-flexbox>
 
@@ -26,7 +32,7 @@
                     <mu-checkbox label="记住我"/>
                 </mu-flexbox-item>
                 <mu-flexbox-item grow="3">
-                    <mu-flat-button label="忘记密码" primary/>
+                    <mu-flat-button label="忘记密码" primary @click="resetPwd()"/>
                 </mu-flexbox-item>
             </mu-flexbox>
 
@@ -78,6 +84,10 @@
         let that = this
         that.$refs.password.type = that.isShowPwd ? 'password' : 'text'
         that.isShowPwd = !that.isShowPwd
+      },
+      //忘记密码
+      resetPwd(){
+        this.$router.push('/auth/resetpwd')
       },
       //跳转首页
       login (){
