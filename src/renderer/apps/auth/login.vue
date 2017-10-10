@@ -35,7 +35,7 @@
                     <mu-raised-button label="登录" primary @click="login()"/>
                 </mu-flexbox-item>
                 <mu-flexbox-item grow="3">
-                    <mu-raised-button label="注册" secondary/>
+                    <mu-raised-button label="注册" secondary @click="register()"/>
                 </mu-flexbox-item>
             </mu-flexbox>
         </div>
@@ -81,6 +81,10 @@
       //跳转首页
       login (){
         this.$router.push('/welcome/index');
+      },
+      //注册
+      register(){
+        this.$router.push('/auth/reg');
       }
     }
 

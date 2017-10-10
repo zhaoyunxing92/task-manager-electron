@@ -3,7 +3,10 @@
  * @date : 2017/9/29 16:44
  * @description :
  */
-const Login = () => import(/* webpackChunkName: "task-login" */ './login.vue')
+const Login = () => import(/* webpackChunkName: "auth" */ './login.vue')
+const Register = () => import(/* webpackChunkName: "auth" */ './register.vue')
+
+
 
 export const name = {
   path: '/auth',
@@ -17,6 +20,12 @@ export const name = {
       name: 'task-login',
       component: Login,
       meta: {title: '登陆'}
+    },
+    {
+      path: '/auth/reg',
+      name: 'task-reg',
+      component: Register,
+      meta: {title: '注册账号'}
     },
   ]
 }

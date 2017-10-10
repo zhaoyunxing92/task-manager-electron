@@ -13,8 +13,9 @@
                 <mu-menu-item value="5" title="英雄联盟"/>
                 <mu-menu-item value="6" title="王者荣耀"/>
             </mu-select-field>
-            
-            <mu-icon value="search"/>
+
+            <mu-auto-complete hintText="搜索" icon="search"/>
+            <!--<mu-icon value="search"/>-->
             <!--信息提示-->
             <mu-badge content="12" circle secondary>
                 <mu-icon-button icon="notifications"/>
