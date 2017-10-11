@@ -129,13 +129,9 @@ let template = [{
   }]
 }]
 
-
-
-
 if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
-
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
@@ -144,11 +140,13 @@ const winURL = process.env.NODE_ENV === 'development'
 
 function createWindow () {
   /**
-   * Initial window options
+   * Initial window options,设置边框的最小
    */
   mainWindow = new BrowserWindow({
     height: 768,
     useContentSize: true,
+    minWidth: 310,
+    minHeight: 550,
     width: 1024
   })
 
@@ -161,7 +159,7 @@ function createWindow () {
   //const menu = Menu.buildFromTemplate(template)
   //Menu.setApplicationMenu(menu)
   /**先隐藏菜单*/
-  mainWindow.setMenu(null);
+  mainWindow.setMenu(null)
 
 }
 
@@ -188,13 +186,13 @@ app.on('activate', () => {
  */
 
 /*
-import { autoUpdater } from 'electron-updater'
+ import { autoUpdater } from 'electron-updater'
 
-autoUpdater.on('update-downloaded', () => {
-  autoUpdater.quitAndInstall()
-})
+ autoUpdater.on('update-downloaded', () => {
+ autoUpdater.quitAndInstall()
+ })
 
-app.on('ready', () => {
-  if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
-})
+ app.on('ready', () => {
+ if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
+ })
  */
