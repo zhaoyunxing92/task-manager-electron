@@ -10,7 +10,6 @@ import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI)
 Vue.use(VueRouter)
 
-console.log(navigator.userAgent.toLowerCase())
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
@@ -35,13 +34,6 @@ router.beforeEach((to, from, next) => {
   document.title = to.meta.title
   next();
 });
-/* eslint-disable no-new */
-// new Vue({
-//   components: { App },
-//   router,
-//   store,
-//   template: '<App/>'
-// }).$mount('#app')
 new Vue({
   components: { App },
   template: '<App/>',

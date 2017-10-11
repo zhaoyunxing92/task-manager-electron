@@ -87,11 +87,11 @@
       },
       //忘记密码
       resetPwd(){
-        this.$router.push('/auth/resetpwd')
+        this.$router.push('/auth/forgetpwd')
       },
       //跳转首页
       login (){
-        this.$router.push('/welcome/index')
+        this.$router.push('/welcome')
       },
       //注册
       register(){

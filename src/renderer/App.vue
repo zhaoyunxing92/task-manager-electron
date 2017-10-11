@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
@@ -10,10 +10,6 @@
   }
 </script>
 
-<style>
-  body{
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    background-color: rgb(236, 236, 236);
-  }
-  /* CSS */
+<style lang="less" type="text/less">
+    @import "assets/css/style";
 </style>

@@ -5,7 +5,7 @@
  */
 const Login = () => import(/* webpackChunkName: "auth" */ './login.vue')
 const Register = () => import(/* webpackChunkName: "auth" */ './register.vue')
-const RestPwd = () => import(/*webpackChunkName: "auth"*/'./resetPwd.vue')
+const RestPwd = () => import(/*webpackChunkName: "auth"*/'./forgetPwd.vue')
 
 export const name = {
   path: '/auth',
@@ -27,10 +27,10 @@ export const name = {
       meta: {title: '注册账号'}
     },
     {
-      path: '/auth/resetpwd',
+      path: '/auth/forgetpwd',
       name: 'task-resetpwd',
       component: RestPwd,
-      meta: {title: '修改密码'}
+      meta: {title: '忘记密码'}
     },
   ]
 }

@@ -36,6 +36,7 @@
     </div>
 </template>
 <script>
+  //const shell = require('electron').shell
   import objectUtils from '../../../utils/ObjectUtils'
   export default {
     name: 'task-restpwd',
@@ -54,6 +55,14 @@
       //关闭对话框 跳转到登陆页面
       closeDialog(){
         this.showDialog = false
+
+       // shell.openExternal('https://mail.qq.com')
+//        const exLinksBtn = document.getElementById('open-ex-links')
+//
+//        exLinksBtn.addEventListener('click', function (event) {
+//          shell.openExternal('https://mail.qq.com')
+//        })
+      //  window.open("https://mail.qq.com")
         // this.$router.push('/auth/login')
       },
       //账号失去焦点验证
@@ -74,7 +83,7 @@
       //发送邮件
       sendEmile(){
         let that = this
-        if (that.emileBlurCheck) {
+        if (that.emileBlurCheck()) {
           this.showDialog = true
         }
       }
