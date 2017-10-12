@@ -51,9 +51,9 @@
             <router-view/>
         </div>
 
-        <div class="footer">
-            task ©2017 Created by sunny
-        </div>
+        <!--<div class="footer">-->
+            <!--task ©2017 Created by sunny-->
+        <!--</div>-->
     </div>
 </template>
 <script>

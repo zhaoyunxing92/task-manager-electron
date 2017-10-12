@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'task-manager-electron'
+    name: 'task-manager-electron',
   }
 </script>
 

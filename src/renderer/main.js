@@ -13,6 +13,11 @@ Vue.use(VueRouter)
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
+//
+// window.onresize = function () {
+//   console.log(5555)
+//   document.getElementById('app').style.height = document.documentElement.clientHeight - 72 * 3
+// }
 
 const router = new VueRouter({
   routes,
@@ -32,10 +37,10 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
-  next();
-});
+  next()
+})
 new Vue({
-  components: { App },
+  components: {App},
   template: '<App/>',
   router,
   store,
