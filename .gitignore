@@ -9,3 +9,7 @@ npm-debug.log
 npm-debug.log.*
 thumbs.db
 !.gitkeep
+dist/web/
+src/renderer/apps/me/
+src/renderer/apps/setting/
+/.idea/

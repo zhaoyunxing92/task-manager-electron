@@ -178,6 +178,5 @@
         max-height: 400px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-
     }
 </style>
